@@ -1,0 +1,28 @@
+{
+	"editor.unicodeHighlight.allowedLocales": {
+		"ru": true
+	},
+	"files.defaultLanguage": "",
+	"editor.unicodeHighlight.includeComments": "inUntrustedWorkspace",
+	"editor.unicodeHighlight.includeStrings": "inUntrustedWorkspace",
+	"editor.unicodeHighlight.nonBasicASCII": false,
+
+	"cSpell.language": "en, ru",
+	"editor.formatOnPaste": true,
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"prettier.useTabs": true,
+	"prettier.semi": false,
+	"prettier.jsxSingleQuote": true,
+	"prettier.singleQuote": true,
+	"prettier.arrowParens": "avoid",
+
+	"editor.formatOnSave": true, // форматировать код при сохранении
+	"editor.smoothScrolling": true, // плавный скролл
+	"workbench.list.smoothScrolling": true, // плавный скролл
+	"editor.padding.top": 15, // отступ сверху кода
+
+	"editor.wordWrap": "on",
+	"editor.unicodeHighlight.ambiguousCharacters": false,
+	"explorer.confirmDelete": false,
+	"explorer.confirmDragAndDrop": false
+}
