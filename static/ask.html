@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>MyPage</title>
+		<link rel="stylesheet" href="dist/css/bootstrap.css" />
+	</head>
+
+	<body>
+		<nav class="navbar bg-body-tertiary">
+			<div class="container-fluid">
+				<h1>
+					<a class="navbar-brand ms-3" style="width: 100px">Ask&Mask</a>
+				</h1>
+				<form class="d-flex" style="width: 600px" role="search">
+					<input
+						class="form-control"
+						type="search"
+						placeholder="Search"
+						aria-label="Search"
+					/>
+					<button class="btn btn-outline-success" type="submit">Find!</button>
+				</form>
+
+				<div class="d-flex justify-content-between gap-4">
+					<div class="border">
+						<img src="avatar.jpg" width="50" height="50" />
+					</div>
+					<div class="d-flex flex-column justify-content-between">
+						Dr.Pepper
+						<div class="d-flex gap-3 me-5">
+							<a href="settngs.ru">Settings</a>
+							<a href="logout,ru">Log out</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<main class="container mt-3">
+			<div class="d-flex gap-3 align-items-center">
+				<h2>New Question</h2>
+			</div>
+
+			<div class="row mt-3">
+				<div class="col-8">
+					<!--Тема вопроса.-->
+					<div class="row">
+						<div class="col-2"><h5>Title</h5></div>
+						<div class="col-9">
+							<textarea
+								class="form-control mb-2"
+								style="max-width: 800px; resize: none"
+								id="userAnswer"
+								rows="3"
+								placeholder="Как поступить в Технопарк?"
+							></textarea>
+						</div>
+					</div>
+
+					<!--Текст вопроса.-->
+					<div class="row">
+						<div class="col-2"><h5>Text</h5></div>
+						<div class="col-9">
+							<textarea
+								class="form-control mb-2"
+								style="max-width: 800px; resize: none"
+								id="userText"
+								rows="7"
+								placeholder="Уже целый год мечтаю о поступлении, не знаю с чего начать подготовку. Посоветуйте литературу или курсы."
+							></textarea>
+						</div>
+					</div>
+
+					<!--Теги-->
+					<div class="row">
+						<div class="col-2"><h5>Tags</h5></div>
+						<div class="col-9">
+							<input
+								class="form-control mb-2"
+								style="max-width: 800px"
+								id="userTags"
+								rows="1"
+								placeholder="VK.Education, Technopark"
+							/>
+
+							<button
+								class="btn btn-primary mt-3"
+								type="button"
+								style="border-right-width: 30px; border-left-width: 30px"
+							>
+								Ask!
+							</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-4">
+					<h3>Popular Tags</h3>
+					<p style="line-height: 2.5">
+						<button type="button" class="btn btn-primary">VK.Education</button>
+						<button type="button" class="btn btn-secondary">Technopark</button>
+						<button type="button" class="btn btn-success">C++</button>
+						<button type="button" class="btn btn-danger">SystemDesign</button>
+						<button type="button" class="btn btn-warning">Algorithm</button>
+						<button type="button" class="btn btn-info">Bootstrap</button>
+					</p>
+					<h3>Best Members</h3>
+					<h4><a href="">User1</a></h4>
+					<h4><a href="">User2</a></h4>
+					<h4><a href="">User3</a></h4>
+					<h4><a href="">User4</a></h4>
+					<h4><a href="">User5</a></h4>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
