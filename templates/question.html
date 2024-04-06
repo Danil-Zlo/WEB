@@ -1,238 +1,178 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>MyPage</title>
-		<link rel="stylesheet" href="dist/css/bootstrap.css" />
-	</head>
-	<body>
-		<nav class="navbar bg-body-tertiary">
-			<div class="container-fluid">
-				<h1>
-					<a class="navbar-brand ms-3" style="width: 100px">Ask&Mask</a>
-				</h1>
-				<form class="d-flex" style="width: 600px" role="search">
-					<input
-						class="form-control"
-						type="search"
-						placeholder="Search"
-						aria-label="Search"
+{% extends 'layouts/base.html' %} {% load static %} {% block content %}
+
+<!--Развёрнутый вопрос.-->
+<!-- { % include 'components/question-item.html' % } -->
+
+<!--Дописать тут образец!!!!-->
+<div class="d-flex gap-3 align-items-center">
+	<div
+		class="card border-top-0 border-start-0 border-end-0 border-3 mb-4"
+		style="max-width: 800px"
+	>
+		<div class="row g-0">
+			<div class="col-md-2 p-1">
+				<div class="border" style="width: 125px">
+					<img
+						src="{% static '/img/avatar.jpg' %}"
+						class="img-fluid rounded-start"
+						alt="Avatar"
 					/>
-					<button class="btn btn-outline-success" type="submit">Find!</button>
-				</form>
-
-				<div class="d-flex justify-content-between gap-4">
-					<div class="border">
-						<img src="avatar.jpg" width="50" height="50" />
-					</div>
-					<div class="d-flex flex-column justify-content-between">
-						Dr.Pepper
-						<div class="d-flex gap-3 me-5">
-							<a href="settngs.ru">Settings</a>
-							<a href="logout,ru">Log out</a>
-						</div>
+					<div class="input-group flex-nowrap">
+						<input
+							type="number"
+							value="5"
+							class="form-control"
+							placeholder="Username"
+							aria-label="Username"
+							aria-describedby="addon-wrapping"
+						/>
 					</div>
 				</div>
 			</div>
-		</nav>
-		<main class="container mt-3">
-			<div class="row">
-				<div class="col-8">
-					<!--Развёрнутый вопрос.-->
-					<div class="d-flex gap-3 align-items-center">
-						<div
-							class="card border-top-0 border-start-0 border-end-0 border-3 mb-4"
-							style="max-width: 800px"
-						>
-							<div class="row g-0">
-								<div class="col-md-2 p-1">
-									<div class="border" style="width: 125px">
-										<img
-											src="avatar.jpg"
-											class="img-fluid rounded-start"
-											alt="Avatar"
-										/>
-										<div class="input-group flex-nowrap">
-											<input
-												type="number"
-												value="5"
-												class="form-control"
-												placeholder="Username"
-												aria-label="Username"
-												aria-describedby="addon-wrapping"
-											/>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-9">
-									<div class="card-body">
-										<h4 class="card-title">
-											Насколько справедливо использовать слово «раздобрел» к
-											человеку, набравшему вес?
-										</h4>
-										<p class="card-text mt-3">
-											Он действительно добреет? Как ещё влияет лишний вес на
-											психику?
-										</p>
-										<p class="card-text"></p>
-										<div class="d-flex gap-2 mt-4">
-											<span>Tags: </span>
-											<a href="">Tag</a>
-											<a href="">Tag</a>
-											<a href="">Tag</a>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!--Ответы-->
-
-					<div class="card mb-3" style="max-width: 800px">
-						<div class="row g-0">
-							<div class="col-md-2 p-2">
-								<div class="border w-75 mb-1" style="width: 100px">
-									<img
-										src="avatar.jpg"
-										class="img-fluid rounded-start"
-										alt="Avatar"
-									/>
-									<div class="input-group flex-nowrap">
-										<input
-											type="number"
-											value="5"
-											class="form-control"
-											placeholder="Username"
-											aria-label="Username"
-											aria-describedby="addon-wrapping"
-										/>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-10">
-								<div class="card-body">
-									<p class="card-text">
-										Чтобы ответить на этот вопрос важно заглянуть в историю
-										самого понятия "добро". Говоря современным языком корень
-										"добр" означает ресурсность, наполненность силой,
-										храбростью.
-									</p>
-									<p class="card-text"></p>
-									<div class="row g-0">
-										<!--Коррект!-->
-										<div class="form-check">
-											<input
-												class="form-check-input"
-												type="checkbox"
-												value=""
-												id="flexCheckChecked"
-												checked
-											/>
-											<label class="form-check-label" for="flexCheckChecked">
-												Correct!
-											</label>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="card mb-3" style="max-width: 800px">
-						<div class="row g-0">
-							<div class="col-md-2 p-2">
-								<div class="border w-75 mb-1" style="width: 100px">
-									<img
-										src="avatar.jpg"
-										class="img-fluid rounded-start"
-										alt="Avatar"
-									/>
-									<div class="input-group flex-nowrap">
-										<input
-											type="number"
-											value="3"
-											class="form-control"
-											placeholder="Username"
-											aria-label="Username"
-											aria-describedby="addon-wrapping"
-										/>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-10">
-								<div class="card-body">
-									<p class="card-text">
-										Древние значение прилагательного "добрый" можно
-										интерпретировать как крепкий, плотный, сильный. Отсюда
-										близость звучания от прокорня «доб», со словом "сдобный", то
-										есть пышный. Понятным становится значение поговорки "ешь —
-										пока не подобреешь". То есть, ни когда станешь ласковым, а
-										когда поправишься, станешь более плотным, более полным. В
-										таком значении фраза "добры молодцы" означала: крепкие,
-										сильные, большие, молодые люди.
-									</p>
-									<p class="card-text"></p>
-									<div class="row g-0">
-										<!--Коррект!-->
-										<div class="form-check">
-											<input
-												class="form-check-input"
-												type="checkbox"
-												value=""
-												id="flexCheckChecked"
-												checked
-											/>
-											<label class="form-check-label" for="flexCheckChecked">
-												Correct!
-											</label>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<!--Свой ответ-->
-					<textarea
-						class="form-control mb-2"
-						style="max-width: 800px; resize: none"
-						id="userAnswer"
-						rows="4"
-						placeholder="Enter your answer here"
-					></textarea>
-					<button class="btn btn-primary mb-4" type="button">Answer</button>
-				</div>
-
-				<div class="col-4">
-					<h3>Popular Tags</h3>
-					<p style="line-height: 2.5">
-						<button type="button" class="btn btn-primary">VK.Education</button>
-						<button type="button" class="btn btn-secondary">Technopark</button>
-						<button type="button" class="btn btn-success">C++</button>
-						<button type="button" class="btn btn-danger">SystemDesign</button>
-						<button type="button" class="btn btn-warning">Algorithm</button>
-						<button type="button" class="btn btn-info">Bootstrap</button>
+			<div class="col-md-9">
+				<div class="card-body">
+					<h4 class="card-title">
+						Насколько справедливо использовать слово «раздобрел» к человеку,
+						набравшему вес?
+					</h4>
+					<p class="card-text mt-3">
+						Он действительно добреет? Как ещё влияет лишний вес на психику?
 					</p>
-					<h3>Best Members</h3>
-					<h4><a href="">User1</a></h4>
-					<h4><a href="">User2</a></h4>
-					<h4><a href="">User3</a></h4>
-					<h4><a href="">User4</a></h4>
-					<h4><a href="">User5</a></h4>
+					<p class="card-text"></p>
+					<div class="d-flex gap-2 mt-4">
+						<span>Tags: </span>
+						<a href="">Tag</a>
+						<a href="">Tag</a>
+						<a href="">Tag</a>
+					</div>
 				</div>
 			</div>
+		</div>
+	</div>
+</div>
 
-			<nav class="container-fluid" aria-label="Пример навигации по страницам">
-				<ul class="pagination">
-					<li class="page-item"><a class="page-link" href="#">1</a></li>
-					<li class="page-item"><a class="page-link" href="#">2</a></li>
-					<li class="page-item"><a class="page-link" href="#">3</a></li>
-					<li class="page-item"><a class="page-link">...</a></li>
-					<li class="page-item"><a class="page-link" href="#">6</a></li>
-				</ul>
-			</nav>
-		</main>
-	</body>
-</html>
+<!--Ответы-->
+
+<div class="card mb-3" style="max-width: 800px">
+	<div class="row g-0">
+		<div class="col-md-2 p-2">
+			<div class="border w-75 mb-1" style="width: 100px">
+				<img
+					src="{% static '/img/avatar.jpg' %}"
+					class="img-fluid rounded-start"
+					alt="Avatar"
+				/>
+				<div class="input-group flex-nowrap">
+					<input
+						type="number"
+						value="5"
+						class="form-control"
+						placeholder="Username"
+						aria-label="Username"
+						aria-describedby="addon-wrapping"
+					/>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-10">
+			<div class="card-body">
+				<p class="card-text">
+					Чтобы ответить на этот вопрос важно заглянуть в историю самого понятия
+					"добро". Говоря современным языком корень "добр" означает ресурсность,
+					наполненность силой, храбростью.
+				</p>
+				<p class="card-text"></p>
+				<div class="row g-0">
+					<!--Коррект!-->
+					<div class="form-check">
+						<input
+							class="form-check-input"
+							type="checkbox"
+							value=""
+							id="flexCheckChecked"
+							checked
+						/>
+						<label class="form-check-label" for="flexCheckChecked">
+							Correct!
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="card mb-3" style="max-width: 800px">
+	<div class="row g-0">
+		<div class="col-md-2 p-2">
+			<div class="border w-75 mb-1" style="width: 100px">
+				<img
+					src="{% static '/img/avatar.jpg' %}"
+					class="img-fluid rounded-start"
+					alt="Avatar"
+				/>
+				<div class="input-group flex-nowrap">
+					<input
+						type="number"
+						value="3"
+						class="form-control"
+						placeholder="Username"
+						aria-label="Username"
+						aria-describedby="addon-wrapping"
+					/>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-10">
+			<div class="card-body">
+				<p class="card-text">
+					Древние значение прилагательного "добрый" можно интерпретировать как
+					крепкий, плотный, сильный. Отсюда близость звучания от прокорня «доб»,
+					со словом "сдобный", то есть пышный. Понятным становится значение
+					поговорки "ешь — пока не подобреешь". То есть, ни когда станешь
+					ласковым, а когда поправишься, станешь более плотным, более полным. В
+					таком значении фраза "добры молодцы" означала: крепкие, сильные,
+					большие, молодые люди.
+				</p>
+				<p class="card-text"></p>
+				<div class="row g-0">
+					<!--Коррект!-->
+					<div class="form-check">
+						<input
+							class="form-check-input"
+							type="checkbox"
+							value=""
+							id="flexCheckChecked"
+							checked
+						/>
+						<label class="form-check-label" for="flexCheckChecked">
+							Correct!
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<nav class="container-fluid" aria-label="Пример навигации по страницам">
+	<ul class="pagination">
+		<li class="page-item"><a class="page-link" href="#">1</a></li>
+		<li class="page-item"><a class="page-link" href="#">2</a></li>
+		<li class="page-item"><a class="page-link" href="#">3</a></li>
+		<li class="page-item"><a class="page-link">...</a></li>
+		<li class="page-item"><a class="page-link" href="#">6</a></li>
+	</ul>
+</nav>
+
+<!--Свой ответ-->
+<textarea
+	class="form-control mb-2"
+	style="max-width: 800px; resize: none"
+	id="userAnswer"
+	rows="4"
+	placeholder="Enter your answer here"
+></textarea>
+<button class="btn btn-primary mb-4" type="button">Answer</button>
+
+{% endblock content %}
