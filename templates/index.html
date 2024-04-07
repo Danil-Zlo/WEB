@@ -1,24 +1,20 @@
-{% extends 'layouts/base.html' %} {% load static %} {% block content %}
+{% extends 'layouts/base.html' %} {% load static %} 
 
-<div class="d-flex gap-3 align-items-center">
-	<h4>New Questions</h4>
-	<h5><a href="">Hot Questions</a></h5>
-</div>
+{% block content %}
 
-{% for question in questions %}
+	<div class="d-flex gap-3 align-items-center">
+		<h4>New Questions</h4>
+		<h5><a href="">Hot Questions</a></h5>
+	</div>
 
-{% include 'components/question-item.html' %} 
+	<!-- Скорее всего цикл c 0 -->
+	{% for question in questions %}
 
-{% endfor %}
+		{% include 'components/question-item.html' %} 
 
-<nav class="container-fluid" aria-label="Пример навигации по страницам">
-	<ul class="pagination">
-		<li class="page-item"><a class="page-link" href="#">1</a></li>
-		<li class="page-item"><a class="page-link" href="#">2</a></li>
-		<li class="page-item"><a class="page-link" href="#">3</a></li>
-		<li class="page-item"><a class="page-link">...</a></li>
-		<li class="page-item"><a class="page-link" href="#">53</a></li>
-	</ul>
-</nav>
+	{% endfor %}
+
+	<!-- Пагинация  -->
+	{% include 'components/pagination.html' %}
 
 {% endblock content %}
