@@ -3,8 +3,8 @@
 {% block content %}
 
 	<div class="d-flex gap-3 align-items-center">
-		<h4>New Questions</h4>
-		<h6><a href="{% url 'hot' %}">Hot Questions</a></h6>
+		<h4>Hot Questions</h4>
+		<h6><a href="{% url 'index' %}">All Questions</a></h6>
 	</div>
 
 	<!-- Скорее всего цикл c 0 -->
@@ -13,8 +13,5 @@
 		{% include 'components/question-item.html' %} 
 
 	{% endfor %}
-
-	<!-- Пагинация  -->
-	{% include 'components/pagination.html' with pages=questions %}
 
 {% endblock content %}
